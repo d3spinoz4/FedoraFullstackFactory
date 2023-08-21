@@ -1,0 +1,22 @@
+version: "3.3"
+
+services:
+
+  react:
+    image: react-app:latest
+    volumes:
+      - /tmp/:/app/updload
+    ports:
+      - '80:80'
+
+  flask:
+    image: flask-app:latest
+    volumes:
+      - /tmp/:/app/updload
+    environment:
+    - FLASK_ENV=development
+    - FLASK_DEBUG=1
+    - FLASK_APP=server
+    ports:
+      - '5000:5000'
+
