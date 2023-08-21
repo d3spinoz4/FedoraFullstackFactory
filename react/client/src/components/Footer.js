@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <p>When task is green Double Click to download results</p>
-      <p>Copyright &copy; 2021</p>
+      <p>Copyright &copy; 2023</p>
       <Link to='/about'>About</Link>
     </footer>
   )
