@@ -9,7 +9,10 @@ sed -i "s/DB_PASS/${DATABASE_PASS}/g" flask/server/main.py
 
 nmcli con up ens160
 
-dnf install docker docker-compose mariadb-server -y
+dnf install docker docker-compose mariadb-server python3-pip -y
+
+pip3 install numpy scipy matplotlib pandas werkzeug flask flask_debug wget
+
 
 systemctl enable mariadb
 systemctl start mariadb
